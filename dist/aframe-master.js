@@ -70482,12 +70482,12 @@ module.exports.Component = registerComponent('screenshot', {
       // Use ortho camera.
       camera = this.camera;
       // Copy position and rotation of scene camera into the ortho one.
-      camera.position.copy(this.data.camera.getWorldPosition());
+      camera.position.copy(this.data.camera.object3D.getWorldPosition());
       el.camera.getWorldQuaternion(camera.quaternion);
       // Create cube camera and copy position from scene camera.
       cubeCamera = new THREE.CubeCamera(el.camera.near, el.camera.far,
                                         Math.min(this.cubeMapSize, 2048));
-      cubeCamera.position.copy(this.data.camera.getWorldPosition());
+      cubeCamera.position.copy(this.data.camera.object3D.getWorldPosition());
       el.camera.getWorldQuaternion(cubeCamera.quaternion);
       // Render scene with cube camera.`
       cubeCamera.updateCubeMap(el.renderer, el.object3D);
@@ -78586,7 +78586,7 @@ _dereq_('./core/a-mixin');
 _dereq_('./extras/components/');
 _dereq_('./extras/primitives/');
 
-console.log('A-Frame Version: 0.8.2 (Date 2018-11-30, Commit #6948be2d)');
+console.log('A-Frame Version: 0.8.2 (Date 2018-11-30, Commit #22f87432)');
 console.log('three Version:', pkg.dependencies['three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
 
