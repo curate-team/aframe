@@ -66112,7 +66112,7 @@ module.exports={
     "present": "0.0.6",
     "promise-polyfill": "^3.1.0",
     "style-attr": "^1.0.2",
-    "three": "https://github.com/mrdoob/three.js.git#fd5077bd2156ea52fa87620bc8aceb9022f24f59",
+    "three": "https://github.com/curate-team/three.js.git#58ac934bf2bc5c383e3cc9aa3ffdfd13f89c6233",
     "three-bmfont-text": "^2.1.0",
     "webvr-polyfill": "^0.10.5"
   },
@@ -78538,7 +78538,7 @@ _dereq_('./core/a-mixin');
 _dereq_('./extras/components/');
 _dereq_('./extras/primitives/');
 
-console.log('A-Frame Version: 0.8.2 (Date 2018-11-30, Commit #b27df534)');
+console.log('A-Frame Version: 0.8.2 (Date 2018-11-30, Commit #63f2989e)');
 console.log('three Version:', pkg.dependencies['three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
 
@@ -80367,7 +80367,7 @@ module.exports.isLandscape = function () {
  * Check if device is iOS and older than version 10.
  */
 module.exports.isIOSOlderThan10 = function (userAgent) {
-  return /(iphone|ipod|ipad).*os.(7|8|9)/i.test(userAgent);
+  return /(iphone|ipod|ipad).*os.(7_|8_|9_)/i.test(userAgent);
 };
 
 /**
